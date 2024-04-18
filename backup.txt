@@ -88,8 +88,6 @@ class Review(db.Model):
     comment = db.Column(db.Text)
     date = db.Column(db.DateTime)
 
-
-
 with app.app_context():
     db.create_all()
 
@@ -139,6 +137,12 @@ if __name__ == '__main__':
 
 
 
+
+
+
+
+
+
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 import requests
@@ -168,8 +172,6 @@ class Review(db.Model):
     rating = db.Column(db.Integer)
     comment = db.Column(db.Text)
     date = db.Column(db.DateTime)
-
-
 
 with app.app_context():
     db.create_all()
