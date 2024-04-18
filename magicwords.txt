@@ -1,0 +1,12 @@
+cd myproject
+Activate:  .venv\Scripts\activate
+Run: flask run
+Debug: flask --debug
+
+display all: http://127.0.0.1:5000/products
+search: http://127.0.0.1:5000/search?query=White%20Gold%20Plated%20Princess
+filter by category: http://127.0.0.1:5000/search?category=electronics
+sort in descending order: http://127.0.0.1:5000/search?sort=desc
+filter by range: http://127.0.0.1:5000/search?price_min=50&price_max=100
+comparison: http://127.0.0.1:5000/compare?ids=1&ids=2&ids=3&sort=price
+add review: Invoke-WebRequest -Uri http://127.0.0.1:5000/reviews -Method POST -ContentType "application/json" -Body '{"product_id": 2, "user_id": 1, "rating": 5, "comment": "Great product!"}'
